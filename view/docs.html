@@ -1,0 +1,814 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - Jstvynn</title>
+
+    <link rel="stylesheet" href="https://zuramai.github.io/mazer/demo/assets/css/main/app.css" />
+    <link rel="stylesheet" href="https://zuramai.github.io/mazer/demo/assets/css/main/app-dark.css" />
+        <link rel="stylesheet" href="https://zuramai.github.io/mazer/demo/assets/css/pages/dripicons.css" />
+        <link rel="stylesheet" href="https://zuramai.github.io/mazer/demo/assets/extensions/@icon/dripicons/dripicons.css" />
+                <link rel="stylesheet" href="https://zuramai.github.io/mazer/demo/assets/extensions/@fortawesome/fontawesome-free/css/all.min.css" />
+    <link
+      rel="shortcut icon"
+      href="https://zuramai.github.io/mazer/demo/assets/images/logo/favicon.svg"
+      type="image/x-icon"
+    />
+    <link
+      rel="shortcut icon"
+      href="https://zuramai.github.io/mazer/demo/assets/images/logo/favicon.png"
+      type="image/png"
+    />
+
+    <link rel="stylesheet" href="https://zuramai.github.io/mazer/demo/assets/css/shared/iconly.css" />
+  </head>
+
+  <body>
+    <div id="app">
+      <div id="sidebar" class="active">
+        <div class="sidebar-wrapper active">
+          <div class="sidebar-header position-relative">
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="logo">
+                <a href="#"
+                  ><img src="https://telegra.ph/file/261fb660025d31a66bb76.jpg" alt="Logo" srcset=""
+                /></a>
+              </div>
+              <div class="theme-toggle d-flex gap-2 align-items-center mt-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  aria-hidden="true"
+                  role="img"
+                  class="iconify iconify--system-uicons"
+                  width="20"
+                  height="20"
+                  preserveAspectRatio="xMidYMid meet"
+                  viewBox="0 0 21 21"
+                >
+                  <g
+                    fill="none"
+                    fill-rule="evenodd"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M10.5 14.5c2.219 0 4-1.763 4-3.982a4.003 4.003 0 0 0-4-4.018c-2.219 0-4 1.781-4 4c0 2.219 1.781 4 4 4zM4.136 4.136L5.55 5.55m9.9 9.9l1.414 1.414M1.5 10.5h2m14 0h2M4.135 16.863L5.55 15.45m9.899-9.9l1.414-1.415M10.5 19.5v-2m0-14v-2"
+                      opacity=".3"
+                    ></path>
+                    <g transform="translate(-210 -1)">
+                      <path d="M220.5 2.5v2m6.5.5l-1.5 1.5"></path>
+                      <circle cx="220.5" cy="11.5" r="4"></circle>
+                      <path
+                        d="m214 5l1.5 1.5m5 14v-2m6.5-.5l-1.5-1.5M214 18l1.5-1.5m-4-5h2m14 0h2"
+                      ></path>
+                    </g>
+                  </g>
+                </svg>
+                <div class="form-check form-switch fs-6">
+                  <input
+                    class="form-check-input me-0"
+                    type="checkbox"
+                    id="toggle-dark"
+                  />
+                  <label class="form-check-label"></label>
+                </div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  aria-hidden="true"
+                  role="img"
+                  class="iconify iconify--mdi"
+                  width="20"
+                  height="20"
+                  preserveAspectRatio="xMidYMid meet"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="currentColor"
+                    d="m17.75 4.09l-2.53 1.94l.91 3.06l-2.63-1.81l-2.63 1.81l.91-3.06l-2.53-1.94L12.44 4l1.06-3l1.06 3l3.19.09m3.5 6.91l-1.64 1.25l.59 1.98l-1.7-1.17l-1.7 1.17l.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95l2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85c-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14c.4-.4.82-.76 1.27-1.08c.75-.53 1.93.36 1.85 1.19c-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82c-2.81 3.14-2.7 7.96.31 10.98c3.02 3.01 7.84 3.12 10.98.31Z"
+                  ></path>
+                </svg>
+              </div>
+              <div class="sidebar-toggler x">
+                <a href="#" class="sidebar-hide d-xl-none d-block"
+                  ><i class="bi bi-x bi-middle"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="sidebar-menu">
+            <ul class="menu">
+            	<li class="sidebar-title">Information</li>
+            	<li class="sidebar-item has-sub">
+                <a href="#" class="sidebar-link">
+                  <div class="bi bi-person-fill"></div>
+                  <span>Thanks To</span>
+                </a>
+                <ul class="submenu">
+                	<li class="submenu-item">
+            	                    <a href="#">Allah SWT</a></li>
+<li class="submenu-item">
+                    <a href="#">Ortu</a></li>
+<li class="submenu-item">
+                    <a href="#">Alip</a></li>
+<li class="submenu-item">
+                    <a href="#">Saugi/zuramai</a></li>
+<li class="submenu-item">
+                    <a href="#">Ronove</a></li>
+<li class="submenu-item">
+                    <a href="#">Penyedia Modul</a></li>
+                    </ul> </li>
+              <li class="sidebar-title">Feature</li>
+
+              <li class="sidebar-item active">
+                <a href="#" class="sidebar-link">
+                  <i class="bi bi-grid-fill"></i>
+                  <span>Dashboard</span>
+                </a>
+              </li>
+
+              <li class="sidebar-item has-sub">
+                <a href="#" class="sidebar-link">
+                  <div class="dripicons dripicons-download"></div>
+                  <span>Download</span>
+                </a>
+                <ul class="submenu">
+   <li class="submenu-item">
+                    <a href="api/dowloader/fbdown?url=https://www.facebook.com/UstazAzharIdrusFansClub/videos/813224618838631" target="_blank">Facebook</a></li>
+                        <li class="submenu-item">
+                    <a href="api/dowloader/twitter?url=https://twitter.com/faqeeyaaz/status/1242789155173617664?s=20&t=DRgdl9U8MwTwpY0o1o-96g" target="_blank">Twitter</a></li>
+                        <li class="submenu-item">
+                    <a href="api/dowloader/tikok?url=https://vt.tiktok.com/ZSdqSfBxG/?k=1" target="_blank">Tiktok Mp4 Mp3</a></li>
+                        <li class="submenu-item">
+                    <a href="api/dowloader/igstory?username=aniq_shaaheen" target="_blank">Instagram Story</a></li>
+                        <li class="submenu-item">
+                    <a href="api/dowloader/igreels?url=https://www.instagram.com/reel/CPKMOwvlfSB/?igshid=YmMyMTA2M2Y=" target="_blank">Instagram Reels</a></li>
+                        <li class="submenu-item">
+                    <a href="api/dowloader/igdowloader?url=https://www.instagram.com/tv/CeBAd9wAA6G/?igshid=MDJmNzVkMjY=" target="_blank">Instagram Video Picture</a></li>
+                        <li class="submenu-item">
+                    <a href="api/dowloader/yt?url=https://youtu.be/3hXbjp-FcTc" target="_blank">Youtube Mp4 Mp3</a></li>
+                        <li class="submenu-item">
+                    <a href="api/dowloader/soundcloud?url=https://soundcloud.com/ndaa-212683099/dj-coba-kau-ingat-ingat-kembali-seharusnya-aku-jungle-dutch-terbaru-2021-full-bass-viral-tik?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" target="_blank">SoundCloud</a></li>
+                        <li class="submenu-item">
+                    <a href="api/dowloader/telesticker?url=https://t.me/addstickers/Shitsshitsshitsshists" target="_blank">Telegram Sticker</a></li>
+                </ul>
+              </li>
+
+              <li class="sidebar-item has-sub">
+                <a href="#" class="sidebar-link">
+                  <i class="icon dripicons dripicons-brush"></i>
+                  <span>Maker</span>
+                </a>
+                <ul class="submenu">
+                    <li class="submenu-item">
+                    <a href="api/textpro/pencil?text=Vynn" target="_blank">Pencils</a></li>
+                        <li class="submenu-item">
+                    <a href="api/textpro/glitch?text=Vynn" target="_blank">Glitch</a></li>
+                        <li class="submenu-item">
+                    <a href="api/textpro/berry?text=Vynn" target="_blank">Berry</a></li>
+                        <li class="submenu-item">
+                    <a href="api/textpro/blackpink?text=Vynn" target="_blank">Black pink</a></li>
+                        <li class="submenu-item">
+                    <a href="api/textpro/neon?text=Vynn" target="_blank">Neon</a></li>
+                        <li class="submenu-item">
+                    <a href="api/textpro/logobear?text=Vynn" target="_blank">Logo Bear</a></li>
+                        <li class="submenu-item">
+                    <a href="api/textpro/3dchristmas?text=Vynn" target="_blank">3D Christmas</a></li>
+                        <li class="submenu-item">
+                    <a href="api/textpro/thunder?text=Vynn" target="_blank">Thunder</a></li>
+                        <li class="submenu-item">
+                    <a href="api/textpro/3dboxtext?text=Vynn" target="_blank">3D Box</a></li>
+                        <li class="submenu-item">
+                    <a href="api/textpro/glitch2?text=Vynn&text2=pro" target="_blank">Glitch2</a></li>
+                        <li class="submenu-item">
+                    <a href="api/textpro/glitchtiktok?text=Vynn&text2=pro" target="_blank">Glitch Tiktok</a></li>
+                    <li class="submenu-item">
+                    <a href="api/textpro/video-game-classic?text=Vynn&text2=pro" target="_blank">Video Game Classic</a></li>
+                        <li class="submenu-item">
+                    <a href="api/textpro/marvel-studios?text=Vynn&text2=pro" target="_blank">Marvel Studios</a></li>
+                        <li class="submenu-item">
+                    <a href="api/textpro/ninja-logo?text=Vynn&text2=pro" target="_blank">Ninja Logo</a></li>
+                        <li class="submenu-item">
+                    <a href="api/textpro/transformer?text=Vynn" target="_blank">Transformer</a></li>
+                        <li class="submenu-item">
+                    <a href="api/textpro/green-horror?text=Vynn" target="_blank">Green Horrorer</a></li>
+                        <li class="submenu-item">
+                    <a href="api/textpro/magma?text=Vynn" target="_blank">Magma</a></li>
+                        <li class="submenu-item">
+                    <a href="api/textpro/3d-neon-light?text=Vynn" target="_blank">3d Neon Light</a></li>
+                        <li class="submenu-item">
+                    <a href="api/textpro/3d-orange-juice?text=Vynn" target="_blank">3d Orange Juice</a></li>
+                        <li class="submenu-item">
+                    <a href="api/textpro/chocolate-cake?text=Vynn" target="_blank">Chocolate Cake</a></li>
+                        <li class="submenu-item">
+                    <a href="api/textpro/strawberry?text=Vynn" target="_blank">Strawberry</a></li>
+                        <li class="submenu-item">
+                    <a href="api/textpro/pencil?text=Vynn" target="_blank">Pencils</a></li></li>
+ <li class="submenu-item">
+                    <a href="api/photooxy/flaming?text=Vynn" target="_blank">Flaming</a></li>
+                        <li class="submenu-item">
+                    <a href="api/photooxy/shadow-sky?text=Vynn" target="_blank">Shadow Sky</a></li>
+                        <li class="submenu-item">
+                    <a href="api/photooxy/metallic?text=Vynn" target="_blank">Metallic</a></li>
+                        <li class="submenu-item">
+                    <a href="api/photooxy/naruto?text=Vynn" target="_blank">Naruto</a></li>
+                        <li class="submenu-item">
+                    <a href="api/photooxy/pubg?text=Pubg&text2=Vynn" target="_blank">PUBG</a></li>
+                        <li class="submenu-item">
+                    <a href="api/photooxy/under-grass?text=Vynn" target="_blank">Under Grass</a></li>
+                        <li class="submenu-item">
+                    <a href="api/photooxy/harry-potter?text=Vynn" target="_blank">Harry Potter</a></li>
+                        <li class="submenu-item">
+                    <a href="api/photooxy/flower-typography?text=Vynn" target="_blank">Flower Typography</a></li>
+                        <li class="submenu-item">
+                    <a href="api/photooxy/picture-of-love?text=Vynn" target="_blank">Picture Of Love</a></li>
+                        <li class="submenu-item">
+                    <a href="api/photooxy/coffee-cup?text=Vynn" target="_blank">Coffee Cup</a></li>
+                        <li class="submenu-item">
+                    <a href="api/photooxy/butterfly?text=Vynn" target="_blank">Butterfly</a></li>
+                        <li class="submenu-item">
+                    <a href="api/photooxy/night-sky?text=Vynn" target="_blank">Night Sky</a></li>
+                        <li class="submenu-item">
+                    <a href="api/photooxy/carved-wood?text=Vynn" target="_blank">Carved Wood</a></li>
+                        <li class="submenu-item">
+                    <a href="api/photooxy/illuminated-metallic?text=Vynn" target="_blank">Illuminated Metallic</a></li>
+                        <li class="submenu-item">
+                    <a href="api/photooxy/sweet-candy?text=Vynn" target="_blank">Sweet Candy</a></li>
+                </ul>
+              </li>
+
+              <li class="sidebar-item has-sub">
+                <a href="#" class="sidebar-link">
+                  <i class="dripicons dripicons-microphone"></i>
+                  <span>Text To Speech</span>
+                  
+                </a>
+                <ul class="submenu">
+                    	                            <li class="submenu-item">
+                    <a href="api/soundoftext?text=hi&lang=id-ID">Indonesian</a></li>
+                            <li class="submenu-item">
+                    <a href="api/soundoftext?text=hi&lang=en-US">English (United States)</a></li>
+                            <li class="submenu-item">
+                    <a href="api/soundoftext?text=hi&lang=ja-JP">Japanese (Japan)</a></li>
+                            <li class="submenu-item">
+                    <a href="api/soundoftext?text=hi&lang=fr-FR">French</a></li>
+                            <li class="submenu-item">
+                    <a href="api/soundoftext?text=hi&lang=fil-PH">Filipino</a></li>
+                            <li class="submenu-item">
+                    <a href="api/soundoftext?text=hi&lang=my">Burmese (Myanmar)</a></li>
+                            <li class="submenu-item">
+                    <a href="api/soundoftext?text=hi&lang=de-DE">German</a></li>
+                            <li class="submenu-item">
+                    <a href="api/soundoftext?text=hi&lang=it-IT">	Italian</a></li>
+                            <li class="submenu-item">
+                    <a href="api/soundoftext?text=hi&lang=jko-KR">Korean</a></li>
+                            <li class="submenu-item">
+                    <a href="api/soundoftext?text=hi&lang=th-TH">Thai</a></li>
+                            <li class="submenu-item">
+                    <a href="api/soundoftext?text=hi&lang=hi-IN">Hindi</a></li>
+                            <li class="submenu-item">
+                    <a href="api/soundoftext?text=hi&lang=ru-RU">Russian</a></li>
+                </ul>
+              </li>
+
+              <li class="sidebar-item has-sub">
+                <a href="#" class="sidebar-link">
+                  <i class="dripicons dripicons-search"></i>
+                  <span>Search</span>
+                  
+                </a>
+                <ul class="submenu">
+                	    <li class="submenu-item">
+                    <a href="api/search/ytplay?text=lagu%dj" target="_blank">Yt Play</a></li>
+                            <li class="submenu-item">
+                    <a href="api/search/linkgroupwa?text=belajar" target="_blank">Group WA</a></li>
+                            <li class="submenu-item">
+                    <a href="api/search/pinterest?text=al-quran" target="_blank">Pinterest</a></li>
+                            <li class="submenu-item">
+                    <a href="api/search/ringtone?text=samsung" target="_blank">Ringtone</a></li>
+                            <li class="submenu-item">
+                    <a href="api/search/wikimedia?text=Malaysia" target="_blank">Wikimedia</a></li>
+                            <li class="submenu-item">
+                    <a href="api/search/google?text=Mobile%20Legends" target="_blank">Google</a></li>
+                            <li class="submenu-item">
+                    <a href="api/search/googleimage?text=Mobile%20Legends" target="_blank">Google Image</a></li>
+                            <li class="submenu-item">
+                    <a href="api/search/wallpaper?text=Mobile%20Legends" target="_blank">Wallpaper</a></li>
+                            <li class="submenu-item">
+                    <a href="api/search/sticker?text=fun" target="_blank">Sticker</a></li>
+                </ul>
+              </li>
+              <li class="sidebar-item has-sub">
+                <a href="#" class="sidebar-link">
+                  <i class="dripicons dripicons-photo-group"></i>
+                  <span>Random image</span>
+                  
+                </a>
+                <ul class="submenu">
+                	                        <li class="submenu-item">
+                    <a href="api/randomgambar/couplepp" target="_blank">Couple pp</a></li>
+                        <li class="submenu-item">
+                    <a href="api/randomgambar/dadu" target="_blank">Dadu</a></li>
+                        <li class="submenu-item">
+                    <a href="api/randomgambar/coffee" target="_blank">Coffee</a></li>
+                	</ul>
+                </li>
+              <li class="sidebar-item has-sub">
+                <a href="#" class="sidebar-link">
+                  <i class="dripicons dripicons-gaming"></i>
+                  <span>Game</span>
+                  
+                </a>
+                <ul class="submenu">
+            <li class="submenu-item">
+                    <a href="api/game/tembakgambar">tebak Gambar</a></li>
+            <li class="submenu-item">
+                    <a href="api/game/susunkata">Susun Kata</a></li>
+            <li class="submenu-item">
+                    <a href="api/game/tembakbendera">tebak Bendera</a></li>
+            <li class="submenu-item">
+                    <a href="api/game/tembakgame">tebak Game</a></li>
+            <li class="submenu-item">
+                    <a href="api/game/tembakkata">tebak Kata</a></li>
+            <li class="submenu-item">
+                    <a href="api/game/tembaklirik">tebak Lirik</a></li>
+            <li class="submenu-item">
+                    <a href="api/game/tembaklagu">tebak Lagu</a></li>
+            <li class="submenu-item">
+                    <a href="api/game/tembakkimia">tebak Kimia</a></li>
+</ul>
+</li>      
+              <li class="sidebar-item has-sub">
+                <a href="#" class="sidebar-link">
+                  <i class="dripicons dripicons-browser"></i>
+                  <span>Canvas</span>
+                  
+                </a>
+                <ul class="submenu">    
+<li class="submenu-item">
+                    <a href="api/maker/circle?url=https://i.pinimg.com/564x/b8/a8/e2/b8a8e281f1a3113630671742b5677c15.jpg">Circle</a></li>
+                        <li class="submenu-item">
+                    <a href="api/maker/beautiful?url=https://i.pinimg.com/564x/b8/a8/e2/b8a8e281f1a3113630671742b5677c15.jpg">Beautiful</a></li>
+                        <li class="submenu-item">
+                    <a href="api/maker/blur?url=https://i.pinimg.com/564x/b8/a8/e2/b8a8e281f1a3113630671742b5677c15.jpg">Blur</a></li>
+                        <li class="submenu-item">
+                    <a href="api/maker/darkness?url=https://i.pinimg.com/564x/b8/a8/e2/b8a8e281f1a3113630671742b5677c15.jpg&no=50">Darkness</a></li>
+                        <li class="submenu-item">
+                    <a href="api/maker/facepalm?url=https://i.pinimg.com/564x/b8/a8/e2/b8a8e281f1a3113630671742b5677c15.jpg">Facepalm</a></li>
+                        <li class="submenu-item">
+                    <a href="api/maker/invert?url=https://i.pinimg.com/564x/b8/a8/e2/b8a8e281f1a3113630671742b5677c15.jpg">Invert</a></li>
+                        <li class="submenu-item">
+                    <a href="api/maker/pixelate?url=https://i.pinimg.com/564x/b8/a8/e2/b8a8e281f1a3113630671742b5677c15.jpg&no=10">Pixelate</a></li>
+                        <li class="submenu-item">
+                    <a href="api/maker/rainbow?url=https://i.pinimg.com/564x/b8/a8/e2/b8a8e281f1a3113630671742b5677c15.jpg">Rainbow</a></li>
+                        <li class="submenu-item">
+                    <a href="api/maker/resize?url=https://i.pinimg.com/564x/b8/a8/e2/b8a8e281f1a3113630671742b5677c15.jpg&width=100&height=100">Resize</a></li>
+                        <li class="submenu-item">
+                    <a href="api/maker/trigger?url=https://i.pinimg.com/564x/b8/a8/e2/b8a8e281f1a3113630671742b5677c15.jpg">Trigger</a></li>
+                        <li class="submenu-item">
+                    <a href="api/maker/wanted?url=https://i.pinimg.com/564x/b8/a8/e2/b8a8e281f1a3113630671742b5677c15.jpg">Wanted</a></li>
+                        <li class="submenu-item">
+                    <a href="api/maker/attp?text=Vynn">ATTP</a></li>
+                        <li class="submenu-item">
+                    <a href="api/maker/ttp?text=Vynn">TTP</a></li>
+                        <li class="submenu-item">
+                    <a href="api/maker/emojimix?emoji1=😂&emoji2=🤢">Emojimix</a></li>
+                        <li class="submenu-item">
+                    <a href="api/maker/welcome1?name=Vynn&gpname=RestApiVynn&member=1&pp=https://telegra.ph/file/261fb660025d31a66bb76.jpg&bg=https://i.pinimg.com/originals/67/0f/49/670f498d795fea0232874671cc479073.jpg">Welcome1</a></li>
+                        <li class="submenu-item">
+                    <a href="api/maker/goodbye1?name=Vynn&gpname=RestApiVynn&member=1&pp=https://telegra.ph/file/261fb660025d31a66bb76.jpg&bg=https://i.pinimg.com/originals/67/0f/49/670f498d795fea0232874671cc479073.jpg">GoodBye1</a></li>
+                </ul>
+                </li>
+                <li class="sidebar-item has-sub">
+                <a href="#" class="sidebar-link">
+                  <i class="dripicons dripicons-link"></i>
+                  <span>Short link</span>
+                  
+                </a>
+                <ul class="submenu">    
+<li class="submenu-item">
+                    <a href="api/linkshort/tinyurl?link=whovynn.my.id">Tinyurl</a></li>
+                        <li class="submenu-item">
+                    <a href="api/linkshort/tinyurlwithalias?link=whovynn.my.id&alias=jstvynn">Tinyurl With Alias</a></li>
+                        <li class="submenu-item">
+                    <a href="api/linkshort/cuttly?link=whovynn.my.id">Cuttly</a></li>
+                        <li class="submenu-item">
+                    <a href="api/linkshort/bitly?link=whovynn.my.id">Bitly</a></li>
+                	</ul></li>
+                <li class="sidebar-item has-sub">
+                <a href="#" class="sidebar-link">
+                  <i class="dripicons dripicons-gear"></i>
+                  <span>Tools</span>            
+                </a>
+                <ul class="submenu">    
+                <li class="submenu-item">
+                                <li class="submenu-item">
+                    <a href="api/tools/ebase64?text=Rest%20Api%20By%20Vynn">Ebase</a></li>
+            <li class="submenu-item">
+                    <a href="api/tools/debase64?text=UmVzdCBBcGkgQnkgQWxpcA==">Debase</a></li>
+            <li class="submenu-item">
+                    <a href="api/tools/ebinary?text=RestApiByVynn">Ebinary</a></li>
+            <li class="submenu-item">
+                    <a href="api/tools/debinary?text=01010010%2001100101%2001110011%2001110100%2001000001%2001110000%2001101001%2001000010%2001111001%2001000001%2001101100%2001101001%2001110000">Debinary</a></li>
+            <li class="submenu-item">
+                    <a href="api/tools/ssweb?link=https://api-alpis.herokuapp.com/">SSWEB</a></li>
+            <li class="submenu-item">
+                    <a href="api/tools/styletext?text=Vynn">Styletext</a></li>
+</ul></li>    	
+                <li class="sidebar-item has-sub">
+                <a href="#" class="sidebar-link">
+                  <i class="bi bi-emoji-laughing-fill"></i>
+                  <span>Emoji</span>            
+                </a>
+                <ul class="submenu">    
+                                    <li class="submenu-item">
+                    <a href="api/emoji/apple?emoji=🗿" target="_blank">Apple Emoji</a></li>
+                        <li class="submenu-item">
+                    <a href="api/emoji/google?emoji=🗿" target="_blank">Google Emoji</a></li>
+                        <li class="submenu-item">
+                    <a href="api/emoji/samsung?emoji=🗿" target="_blank">Samsung Emoji</a></li>
+                        <li class="submenu-item">
+                    <a href="api/emoji/microsoft?emoji=🗿" target="_blank">Microsoft Emoji</a></li>
+                        <li class="submenu-item">
+                    <a href="api/emoji/whatsapp?emoji=🗿" target="_blank">WhatsApp Emoji</a></li>
+                        <li class="submenu-item">
+                    <a href="api/emoji/twitter?emoji=🗿" target="_blank">Twitter Emoji</a></li>
+                        <li class="submenu-item">
+                    <a href="api/emoji/facebook?emoji=🗿" target="_blank">Facebook Emoji</a></li>
+                        <li class="submenu-item">
+                    <a href="api/emoji/skype?emoji=🗿" target="_blank">Skype Emoji</a></li>
+</ul></li>    	
+                <li class="sidebar-item has-sub">
+                <a href="#" class="sidebar-link">
+                  <i class="bi bi-heart-fill"></i>
+                  <span>Islami</span>            
+                </a>
+                <ul class="submenu">    
+                                    <li class="submenu-item">
+                    <a href="api/islamic/surah?no=1">Search Surah</a></li>                  
+                        <li class="submenu-item">
+                    <a href="api/islamic/tafsirsurah?text=adam">Tafsir Surah</a></li>        
+</ul></li>    	
+              <li class="sidebar-title">Sosmed</li>
+
+              <li class="sidebar-item">
+                <a
+                  href="https://wa.me/6289604111770/"
+                  class="sidebar-link"
+                >
+                  <i class="bi bi-whatsapp"></i>
+                  <span>Whatsapp</span>
+                </a>
+              </li>
+
+              <li class="sidebar-item">
+                <a
+                  href="https://chat.whatsapp.com/J0KEkCuv53e1XJE1JkdMTX"
+                  class="sidebar-link"
+                >
+                  <i class="bi bi-whatsapp"></i>
+                  <span>Grup whatsapp</span>
+                </a>
+              </li>
+
+              <li class="sidebar-item">
+                <a
+                  href="https://instagram.com/whovynn_"
+                  class="sidebar-link"
+                >
+                  <i class="bi bi-instagram"></i>
+                  <span>Instagram</span>
+                </a>
+              </li>
+
+              <li class="sidebar-item">
+                <a
+                  href="https://github.com/onlyvynn"
+                  class="sidebar-link"
+                >
+                  <i class="bi bi-github"></i>
+                  <span>Github</span>
+                </a>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div id="main">
+        <header class="mb-3">
+          <a href="#" class="burger-btn d-block d-xl-none">
+            <i class="bi bi-justify fs-3"></i>
+          </a>
+        </header>
+
+       <div class="main-content container-fluid">
+    <div class="page-title">
+        <h3>Dashboard</h3>
+    </div>
+    
+                    <section class="section">
+        <div class="row mb-2">
+            <div class="col-12 col-md-3">
+            	</div>
+        </div>
+        <div class="row mb-4">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-4 col-12">
+                                <div class="pl-3">
+                                	
+<div class="text-xs font-weight-bold text-uppercase mb-1">Time</div>
+<div class="h5 mb-0 font-weight-bold text-white-800">
+<div class="jam" id="jam">00:00:00</div>
+</div>
+<div class="mt-2 mb-0 text-muted text-xs">
+</span>
+<span>Waktu Indonesia Barat</span>
+  <div class="h5 mb-0 font-weight-bold" id="text-xsfont-weight-boldtext-uppercase-mb-1">Ohayou</div>
+</div>
+</div>
+<div class="col-auto">
+</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                                    </div>
+                                    <div class="col-auto">
+                                    </div>
+                               
+        
+                        </div>
+                        </section>
+                        
+</div>
+
+        <footer>
+          <div class="footer clearfix mb-0 text-muted">
+            </div>
+            <div class="float-end">
+              <p>
+                Created
+                <span class="text-danger"><i class="bi bi-heart"></i></span> by
+                <a href="ronove.html">Ronove</a>
+              </p>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <script src="https://zuramai.github.io/mazer/demo/assets/js/bootstrap.js"></script>
+    <script src="https://zuramai.github.io/mazer/demo/assets/js/app.js"></script>
+
+    <!-- Need: Apexcharts -->
+    <script src="https://zuramai.github.io/mazer/demo/assets/extensions/apexcharts/apexcharts.min.js"></script>
+    <script src="https://zuramai.github.io/mazer/demo/assets/js/pages/dashboard.js"></script>
+    <script>
+                	const player = "O";
+const computer = "X";
+
+let board_full = false;
+let play_board = ["", "", "", "", "", "", "", "", ""];
+
+const board_container = document.querySelector(".play-area");
+
+const winner_statement = document.getElementById("winner");
+
+check_board_complete = () => {
+  let flag = true;
+  play_board.forEach(element => {
+    if (element != player && element != computer) {
+      flag = false;
+    }
+  });
+  board_full = flag;
+};
+
+
+const check_line = (a, b, c) => {
+  return (
+    play_board[a] == play_board[b] &&
+    play_board[b] == play_board[c] &&
+    (play_board[a] == player || play_board[a] == computer)
+  );
+};
+
+const check_match = () => {
+  for (i = 0; i < 9; i += 3) {
+    if (check_line(i, i + 1, i + 2)) {
+      document.querySelector(`#block_${i}`).classList.add("win");
+      document.querySelector(`#block_${i + 1}`).classList.add("win");
+      document.querySelector(`#block_${i + 2}`).classList.add("win");
+      return play_board[i];
+    }
+  }
+  for (i = 0; i < 3; i++) {
+    if (check_line(i, i + 3, i + 6)) {
+      document.querySelector(`#block_${i}`).classList.add("win");
+      document.querySelector(`#block_${i + 3}`).classList.add("win");
+      document.querySelector(`#block_${i + 6}`).classList.add("win");
+      return play_board[i];
+    }
+  }
+  if (check_line(0, 4, 8)) {
+    document.querySelector("#block_0").classList.add("win");
+    document.querySelector("#block_4").classList.add("win");
+    document.querySelector("#block_8").classList.add("win");
+    return play_board[0];
+  }
+  if (check_line(2, 4, 6)) {
+    document.querySelector("#block_2").classList.add("win");
+    document.querySelector("#block_4").classList.add("win");
+    document.querySelector("#block_6").classList.add("win");
+    return play_board[2];
+  }
+  return "";
+};
+
+const check_for_winner = () => {
+  let res = check_match()
+  if (res == player) {
+    winner.innerText = "You Win, Apikey: VynnsHome";
+    winner.classList.add("playerWin");
+    board_full = true
+  } else if (res == computer) {
+    winner.innerText = "Awokawok Kalah Ama Komputer:v";
+    winner.classList.add("computerWin");
+    board_full = true
+  } else if (board_full) {
+    winner.innerText = "Draw!";
+    winner.classList.add("draw");
+  }
+};
+
+
+const render_board = () => {
+  board_container.innerHTML = ""
+  play_board.forEach((e, i) => {
+    board_container.innerHTML += `<div id="block_${i}" class="block" onclick="addPlayerMove(${i})">${play_board[i]}</div>`
+    if (e == player || e == computer) {
+      document.querySelector(`#block_${i}`).classList.add("occupied");
+    }
+  });
+};
+
+const game_loop = () => {
+  render_board();
+  check_board_complete();
+  check_for_winner();
+}
+
+const addPlayerMove = e => {
+  if (!board_full && play_board[e] == "") {
+    play_board[e] = player;
+    game_loop();
+    addComputerMove();
+  }
+};
+
+const addComputerMove = () => {
+  if (!board_full) {
+    do {
+      selected = Math.floor(Math.random() * 9);
+    } while (play_board[selected] != "");
+    play_board[selected] = computer;
+    game_loop();
+  }
+};
+
+const reset_board = () => {
+  play_board = ["", "", "", "", "", "", "", "", ""];
+  board_full = false;
+  winner.classList.remove("playerWin");
+  winner.classList.remove("computerWin");
+  winner.classList.remove("draw");
+  winner.innerText = "";
+  render_board();
+};
+
+//initial render
+render_board();
+</script>
+<style>
+	.play-area {
+	background-color: #e3eaef;
+  display: grid;
+  width: 300px;
+  height: 300px;
+  grid-template-columns: auto auto auto;
+}
+
+.block {
+  display: flex;
+  width: 100px;
+  height: 100px;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  font-weight: bold;
+  border: 3px solid black;
+  transition: background 0.2s ease-in-out;
+}
+
+.block:hover {
+  cursor: pointer;
+  background: #0ff30f;
+}
+
+.occupied:hover {
+  background: #ff3a3a;
+}
+
+.win {
+  background: #0ff30f;
+}
+
+.win:hover {
+  background: #0ff30f;
+}
+
+#block_0,
+#block_1,
+#block_2 {
+  border-top: none;
+}
+
+#block_0,
+#block_3,
+#block_6 {
+  border-left: none;
+}
+
+#block_6,
+#block_7,
+#block_8 {
+  border-bottom: none;
+}
+
+#block_2,
+#block_5,
+#block_8 {
+  border-right: none;
+}
+
+button1 {
+  outline: none;
+  border: 4px solid green;
+  padding: 8px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  background: none;
+  transition: all 0.2s ease-in-out;
+}
+
+button1:hover {
+  cursor: pointer;
+  background: green;
+  color: white;
+}
+
+.playerWin {
+  color: black;
+}
+
+.computerWin {
+  color: red;
+}
+
+.draw {
+  color: orangered;
+}
+
+@media only screen and (max-width: 600px) {
+
+  h11 {
+    font-size: 3rem;
+    margin-bottom: 0.5em;
+  }
+
+  h21 {
+    margin-top: 1em;
+    font-size: 1.3rem;
+  }
+}
+	</style>
+	<script type="text/javascript">
+// 1 detik = 1000
+window.setTimeout("waktu()",1000);  
+function waktu() {   
+var tanggal = new Date();  
+setTimeout("waktu()",1000);  
+document.getElementById("jam").innerHTML = tanggal.getHours()+":"+tanggal.getMinutes()+":"+tanggal.getSeconds();
+}
+</script>
+<script> let scrollToTopRoundedfasfauserninjaXfa2xtextprimary=document.querySelector('div#row-no-guttersalign-items-center');let fasfauserninjaXfa2xtextprimary=document.querySelector('div#text-xsfont-weight-boldtext-uppercase-mb-1');setInterval(()=>{var widthdeVicewidthXinitialscalesHrinkno=new Date();const Jam= widthdeVicewidthXinitialscalesHrinkno.getHours().toString().padStart(2,0);const jam= widthdeVicewidthXinitialscalesHrinkno.getHours().toString().padStart(2,0);const menit= widthdeVicewidthXinitialscalesHrinkno.getMinutes().toString().padStart(2,0);const Menit = widthdeVicewidthXinitialscalesHrinkno.getMinutes().toString().padStart(2,0);const Detik = widthdeVicewidthXinitialscalesHrinkno.getSeconds().toString().padStart(2,0);const detik= widthdeVicewidthXinitialscalesHrinkno.getSeconds().toString().padStart(2,0);const jaM= widthdeVicewidthXinitialscalesHrinkno.getHours().toString().padStart(2,0);const mEnit= widthdeVicewidthXinitialscalesHrinkno.getMinutes().toString().padStart(2,0);const detIk= widthdeVicewidthXinitialscalesHrinkno.getSeconds().toString().padStart(2,0);if(Jam<4){fasfauserninjaXfa2xtextprimary.innerHTML="Ohayou";}else if(jam<11){fasfauserninjaXfa2xtextprimary.innerHTML="Ohayou";}else if(Jam<16){fasfauserninjaXfa2xtextprimary.innerHTML="Konnichiwa";}else if(jam<20){fasfauserninjaXfa2xtextprimary.innerHTML="Konbanwa";}else{fasfauserninjaXfa2xtextprimary.innerHTML="Oyasumi";}scrollToTopRoundedfasfauserninjaXfa2xtextprimary.innerHTML=jaM+":"+mEnit+":"+detIk},250);
+</script>
+  </body>
+</html>
